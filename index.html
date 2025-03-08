@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <title>Para Meu Amor</title>
+</head>
+<body>
+    <div id="senha-container">
+        <h2>Digite a senha para acessar:</h2>
+        <input type="password" id="senha" placeholder="Digite a senha">
+        <button onclick="verificarSenha()">Entrar</button>
+    </div>
+    
+    <div id="conteudo" class="container" style="display: none;">
+		<div>
+			<h1>Feliz Dia das Mulheres, Meu Amor!</h1>
+			<div class="cont">
+				<div class="card">
+					<p>Você é incrível e merece todo o amor do mundo. Obrigado por ser tão especial!</p>
+					<h2>"Meu coração é seu, hoje e sempre." ❤️</h2>
+					<p>"Desde que te conheci, cada momento ao seu lado se tornou uma lembrança preciosa. Você é a razão do meu sorriso e do brilho nos meus olhos. Te amo infinitamente!"</p>
+				</div>
+				<div class="containter_imgs">
+					<img src="midias/Foto 1.jpg" alt="Foto do casal">
+					<img src="midias/Foto 2.jpg" alt="Foto do casal">
+					<img src="midias/Foto 3.jpg" alt="Foto do casal">
+				</div>
+			</div>
+		</div>
+		<div class="cont_vid">
+			<video controls>
+				<source src="midias/Video Luiz.mp4" type="video/mp4">
+				Seu navegador não suporta o elemento de vídeo.
+			</video>
+		</div>
+    </div>
+    
+    <script>
+        function verificarSenha() {
+            const senhaCorreta = "1234"; // Defina a senha desejada
+            let senhaDigitada = document.getElementById("senha").value;
+            
+            if (senhaDigitada === senhaCorreta) {
+                document.getElementById("senha-container").style.display = "none";
+                document.getElementById("conteudo").style.display = "block";
+            } else {
+                alert("Senha incorreta! Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>
